@@ -27,16 +27,3 @@ a{
     color:red;
 }
 
-/* Zhijie Xu */
-
-.Background-Pictures{
-    background-image: url('under.jpg');
-    background-position: center;
-}
-.rows{
-    display: flex;
-    flex-wrap: wrap;
-    
-    justify-content: space-between;
-    align-items:right;
-}
