@@ -196,3 +196,7 @@ a {
 .openbtn:hover {
     background-color: #444;
 }
+
+.popproduct a:hover{
+    background-color: grey;
+}
