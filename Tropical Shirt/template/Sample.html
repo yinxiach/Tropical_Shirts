@@ -61,6 +61,11 @@
     <div class="column">
         <h2 style text-align=center>LI-NING White Hoodie<br><br> </h2>
         <h3>Price:$100 </h3>
+        <div>
+            <button type="button" onclick="increase()">+</button>
+            <input type="text" id="text" value="0">
+            <button type="button" onclick="decrease()">-</button>
+        </div>
     </div>
 
 </body>
@@ -76,4 +81,16 @@
     }
 </script>
 
+<!--- add to cart icon Devon Wang-->
+<script>
+    function increase() {
+         var textBox = document.getElementById("text");
+         textBox.value++;
+                
+    }    
+    function decrease() {
+         var textBox = document.getElementById("text");
+         textBox.value--;
+    }  
+</script>
 </html>
