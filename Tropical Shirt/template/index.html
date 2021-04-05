@@ -40,9 +40,20 @@
         </header>
     </div>
 
+    <!--Yinxia Chen, Shopping cart sidewindow-->
+    <div class = "shopping-cart">
+        <button
+        id = "Cart"
+        class = "cart"
+        onclick = "openCart()"
+        style = "background: url(shopping-cart.png) no-repeat; background-size: 100%; background-color: red; ">
+        </button>
+        <div id = "shopping_cart_popup" class = "sc-popup">
+            <!-- The fill-up will be defined by Java-script / Cookies -->
+        </div>
+    </div>
 
-
-
+    
     <!--- top naviagtion/search bar Devon Wang-->
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
@@ -110,6 +121,9 @@
 </body>
 
 
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 <!--- Sidepanel  Devon Wang-->
     <script>
         /* Set the width of the sidebar to 250px (show it) */
@@ -119,6 +133,26 @@
         /* Set the width of the sidebar to 0 (hide it) */
         function closeNav() {
         document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        /*pop out the shopping-cart window*/
+        function openCart(){
+        document.getElementById("Cart").style.right = "400px";   
+        document.getElementById("shopping_cart_popup").style.width = "400px";
+        document.getElementById("shopping_cart_popup").style.borderLeft = "2px solid red";
+        document.getElementById("shopping_cart_popup").style.borderTop = "10px solid red";
+        document.getElementById("shopping_cart_popup").style.borderBottom = "10px solid red";
+        document.getElementById("shopping_cart_popup").style.backgroundColor = "white";
+        $("#Cart").attr("onclick", "closeCart()")
+        }
+        function closeCart(){
+        document.getElementById("Cart").style.right = "0";
+        document.getElementById("shopping_cart_popup").style.width = "0";
+        document.getElementById("shopping_cart_popup").style.borderLeft = "1px solid rgba(0,0,0,0)";
+        document.getElementById("shopping_cart_popup").style.borderTop = "1px solid rgba(0,0,0,0)";
+        document.getElementById("shopping_cart_popup").style.borderBottom = "1px solid rgba(0,0,0,0)";
+        document.getElementById("shopping_cart_popup").style.backgroundColor = "rgba(0,0,0,0)";
+        $("#Cart").attr("onclick", "openCart()")
         }
     </script>
     
