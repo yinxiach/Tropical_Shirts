@@ -197,6 +197,42 @@ a {
     background-color: #444;
 }
 
+
 .popproduct a:hover{
     background-color: grey;
+
+
+
+.shopping-cart {
+    height:100%;
+    width: 440px;
+    background-color:rgba(0,0,0,0);
+    padding: 10px 15px;
+    position: fixed;
+    right:0px;
+    top:0px;
+}
+
+.cart {
+    width : 40px;
+    height : 40px;
+    position: absolute;
+    padding: 5px 5px;
+    right: 0px;
+    top: 400px;
+    transition: 0.5s;
+}
+
+.sc-popup {
+    width: 0px;
+    height : 90%;
+    position : fixed;
+    right: 0px;
+    top: 20px;
+    background-color:rgba(0,0,0,0);
+    border-left:1px solid rgba(0,0,0,0);
+    border-top:1px solid rgba(0,0,0,0);
+    border-bottom:1px solid rgba(0,0,0,0);
+    transition: 0.5s;
+
 }
