@@ -9,25 +9,27 @@
 </head>
 
 <body id="login">
+
     <br><br><br> Login <br><br><br>
 
+    <form action="Login_Script.php" method="POST">
 
-    <form id="loginContainer">
-        <label>username:</label>
-        <input type="text"> <br><br>
+        <label for="username"><b>Username</b></label>
 
-
-        <label>password:</label>
-        <input type="Password"> <br><br>
+        <input type="text" placeholder="Enter your Username" name="username" required> <br><br>
 
 
-        <button type="button" onclick="alert('Login script has not been implemented')"> Log in </button>
-        <!-- after login script implemented, the alert message should be removed-->
+        <label for="password"><b>Password</b></label>
+        <input type="Password" placeholder="Enter your Password" name="password" required>
+        <br><br>
+
+
+        <button type="submit"> Log in </button>
         <p>
             <a href="sign up.html">Don't have an account yet? Sign Up Here!</a>
-          </p>
-
+        </p>
     </form>
 </body>
+
 
 </html>
