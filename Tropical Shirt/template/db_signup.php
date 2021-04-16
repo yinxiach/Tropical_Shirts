@@ -49,5 +49,8 @@
         else {echo '<script> alert("Error: Account created failed!") </script>';}
     }
     mysqli_close($connect);
-    echo '<script> location.replace("login.html"); </script>';
+
+    echo '<script> location.replace("Login.html"); </script>';
+
 ?>
+
