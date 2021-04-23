@@ -51,6 +51,7 @@
         </button>
         <div id = "shopping_cart_popup" class = "sc-popup">
             <!-- The fill-up will be defined by Java-script / Cookies -->
+            <button class="checkout" id = "cob" onclick = "window.open('Checkout.html')"> Checkout </button>
         </div>
     </div>
 
@@ -144,6 +145,7 @@
         document.getElementById("shopping_cart_popup").style.borderTop = "10px solid red";
         document.getElementById("shopping_cart_popup").style.borderBottom = "10px solid red";
         document.getElementById("shopping_cart_popup").style.backgroundColor = "white";
+        document.getElementById("cob").style.display = "inline";
         $("#Cart").attr("onclick", "closeCart()")
         }
         function closeCart(){
@@ -153,6 +155,7 @@
         document.getElementById("shopping_cart_popup").style.borderTop = "1px solid rgba(0,0,0,0)";
         document.getElementById("shopping_cart_popup").style.borderBottom = "1px solid rgba(0,0,0,0)";
         document.getElementById("shopping_cart_popup").style.backgroundColor = "rgba(0,0,0,0)";
+        document.getElementById("cob").style.display = "none";
         $("#Cart").attr("onclick", "openCart()")
         }
     </script>

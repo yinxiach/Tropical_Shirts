@@ -235,3 +235,14 @@ a {
     border-bottom:1px solid rgba(0,0,0,0);
     transition: 0.5s;
 }
+
+.checkout {
+    position : fixed;
+    width : 300px;
+    height : 60px;
+    padding : 5px 5px;
+    background-color: red;
+    right : 50 px;
+    bottom: 100px;
+    display: none;
+}
