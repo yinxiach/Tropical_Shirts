@@ -415,3 +415,35 @@ function increaseCartItem(product) {
 }
 
 
+
+
+
+var removeAll = document.getElementsByClassName("removeAll");
+
+
+for (var w = 0; w < removeAll.length; w++) {
+  var allbutton = removeAll[w];
+
+  allbutton.addEventListener("click", () => {
+    cleanAll();
+    displayCart();
+  });
+}
+
+
+
+function cleanAll(){
+  
+  localStorage.setItem("cartNumbers", 0);
+  localStorage.setItem("totalCost", 0);
+
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  if (cartItems != null) {
+    cartItems = {};
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  }
+  onloadcartNumbers();
+  displayCart();
+}
+

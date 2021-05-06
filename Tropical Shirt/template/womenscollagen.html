@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Product Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
 
-    <style>
-        .column {
-            float: left;
-            width: 50.00%;
-            padding-top: 100px;
-        }
-    </style>
-</head>
+    <head>
+        <title>Product Page</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+        <link rel="stylesheet" href="carts.css" />
+    
+        <style>
+          ion-icon {
+            font-size: 30px;
+          }
+        </style>
+      </head>
 
 <body>
 
@@ -30,22 +33,27 @@
     <!-- Jiahao Zhang-->
     <div class="Main-Website">
         <header class="rows">
-            <div>
-                <!--- Sidepanel Devon Wang -->
-                <button class="openbtn" onclick="openNav()">&#9776;</button>
 
-                <a href="index.html">Tropical Shirt</a>
-            </div>
-
-            <!--- Shopping Cart button and Catalog Button -->
-            <div>
-                <a href="Shopping_Cart.html">Shopping Cart</a>&nbsp&nbsp &nbsp&nbsp
-                <!-- Jiahao Zhang-->
-                <a href="Catalog.html">Catalog</a> &nbsp&nbsp &nbsp&nbsp
-                <a href="Login.html">Login</a>
-            </div>
+          <div>
+            <!--- Sidepanel Devon Wang -->
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+  
+            <a href="index.html">Tropical Shirt</a>
+          </div>
+  
+          <!--- Shopping Cart button and Catalog Button -->
+          <div>
+            <a class="openbtn" href="Shopping_Cart.html">
+              <!--- Shopping Cart Number -->
+              <ion-icon name="cart-outline"></ion-icon><span>0</span> </a
+            >&nbsp&nbsp &nbsp&nbsp
+  
+            <a href="Catalog.html">Catalog</a> &nbsp&nbsp &nbsp&nbsp
+            <a href="Login.html">Login</a>
+          </div>
         </header>
-    </div>
+      </div>
+
 
     <!--- top naviagtion/search bar Devon Wang-->
     <div class="topnav">
@@ -56,20 +64,22 @@
     </div>
 
 
-    <div class="column">
-        <img src="Women.jpg" width="700px" height="600px">
-    </div>
-    <div class="column">
-        <h2 style text-align=center>GNC Women's Collagen<br><br></h2>
-        <h3> Price:$12 </h3>
-        <!--- add to cart icon Devon Wang-->
-        <div>
-            <button type="button" onclick="increase()">+</button>
-            <input type="text" id="text" value="0">
-            <button type="button" onclick="decrease()">-</button>
+    <section class="container content-section">
+        <div class="shop-items">
+          <div class="shop-item">
+            <span class="shop-item-title">GNC Women's Collagen</span>
+            <img class="shop-item-image" src="Women.jpg" />
+            <div class="shop-item-details">
+              <span class="shop-item-price">$12</span>
+              <button class="btn btn-primary shop-item-button" type="button">
+                ADD TO CART
+              </button>
+            </div>
+          </div>
         </div>
-        <button style="font-size:24px">Add to Cart <i class="fa fa-shopping-cart"></i>
-    </div>
+      </section>
+
+
 
 </body>
 
@@ -77,25 +87,16 @@
 <script>
     /* Set the width of the sidebar to 250px (show it) */
     function openNav() {
-        document.getElementById("mySidepanel").style.width = "250px";
+
+      document.getElementById("mySidepanel").style.width = "250px";
     }
     /* Set the width of the sidebar to 0 (hide it) */
     function closeNav() {
-        document.getElementById("mySidepanel").style.width = "0";
+      document.getElementById("mySidepanel").style.width = "0";
     }
-</script>
+    </script>
+    
+    <script src="shoppin.js"></script>
+    
+    </html>
 
-<!--- add to cart icon Devon Wang-->
-<script>
-    function increase() {
-         var textBox = document.getElementById("text");
-         textBox.value++;
-                
-    }    
-    function decrease() {
-         var textBox = document.getElementById("text");
-         textBox.value--;
-    }  
-</script>
-
-</html>
