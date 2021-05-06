@@ -1,42 +1,130 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    
 
-<!-- Zhijie Xu-->
-<html>
-    <head>
-        <title> Shopping Cart Page</title>
-    </head>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <link rel="stylesheet" href="carts.css" />
+
     <style>
-        div.sticky {
-          position: -webkit-sticky;
-          position: sticky;
-          top: 0;
-          background-color: rgb(253, 253, 253);
-          padding: 5px;
-          font-size: 20px;
-        }
-        .block {
-            display: block;
-            width: 100%;
-            border: none;
-            background-color: #d1d1d1;
-            color: rgb(0, 0, 0);
-            padding: 14px 28px;
-            font-size: 20px;
-            cursor: pointer;
-            text-align: center;
+      ion-icon {
+        font-size: 30px;
+      }
+
+      .check {
+        background-color: #04AA6D;
+      color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 24px;
 }
+      
+    </style>
+  </head>
 
-        .block:hover {
-            background-color: rgb(17, 102, 43);
-            color: rgb(255, 250, 250);
+  <body>
+    <!--- Sidepanel Devon Wang-->
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="Food.html">Food</a>
+      <a href="Electronics.html">Electronics</a>
+      <a href="Health.html">Health</a>
+    </div>
+
+    <!-- Jiahao Zhang-->
+    <div class="Main-Website">
+      <header class="rows">
+        <div>
+          <!--- Sidepanel Devon Wang -->
+          <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+          <a href="index.html">Tropical Shirt</a>
+        </div>
+
+        <!--- Shopping Cart button and Catalog Button -->
+        <div>
+          <a class="openbtn" href="Shopping_Cart.html">
+            <!--- Shopping Cart Number -->
+            <ion-icon name="cart-outline"></ion-icon><span>0</span> </a
+          >&nbsp&nbsp &nbsp&nbsp
+
+          <a href="Catalog.html">Catalog</a> &nbsp&nbsp &nbsp&nbsp
+          <a href="Login.html">Login</a>
+        </div>
+      </header>
+    </div>
+
+    <!--- top naviagtion/search bar Devon Wang-->
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About and Contact </a>
+      <input type="text" placeholder="Search.." />
+    </div>
+
+    <div class="products-container">
+      <div class="product-header">
+        <h5 class="cart-title">PRODUCT</h5>
+        <h5 class="cart-price">PRICE</h5>
+        <h5 class="cart-quantity">QUANTITY</h5>
+        <h5 class="cart-total">TOTAL</h5>
+      </div>
+
+      <div class="products"></div>
+    </div>
+
+    <form action="cart.php" method="post">
+    
+      <button id="checks" class="check">Checkout</button>
+
+    </form>
+    
+    <button class="btn btn-primary shop-item-button removeAll" type="button">
+      Remove
+    </button>
+    
+  </body>
+
+  <!--- Sidepanel  Devon Wang-->
+  <script>
+    /* Set the width of the sidebar to 250px (show it) */
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+
+/*
+const checks = document.getElementById("checks");
+checks.addEventListener("click", sendtophp);
+      
+
+
+function sendtophp(event){
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  var xx="json_string=" +JSON.stringify(cartItems);
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "cart.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(xx);
 }
-        
-        </style>
-
-    <body>
-
-        <div class="sticky"><a href = "Checkout.html"><button class="block">Check Out</button></a></div>
-        <button>Remove Item</button>
-        
-    </body>
+*/
+  </script>
+  
+  
+  <script src="shoppin.js"></script>
 </html>
