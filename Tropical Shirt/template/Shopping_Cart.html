@@ -65,6 +65,7 @@
       </header>
     </div>
 
+
     <!--- top naviagtion/search bar Devon Wang-->
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
@@ -89,6 +90,7 @@
 
     </form>
     
+
     <button class="btn btn-primary shop-item-button removeAll" type="button">
       Remove
     </button>
@@ -110,8 +112,6 @@
 const checks = document.getElementById("checks");
 checks.addEventListener("click", sendtophp);
       
-
-
 function sendtophp(event){
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);

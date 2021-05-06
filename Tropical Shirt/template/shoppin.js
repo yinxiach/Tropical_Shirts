@@ -417,6 +417,7 @@ function increaseCartItem(product) {
 
 
 
+
 var removeAll = document.getElementsByClassName("removeAll");
 
 
@@ -445,3 +446,4 @@ function cleanAll(){
   onloadcartNumbers();
   displayCart();
 }
+
