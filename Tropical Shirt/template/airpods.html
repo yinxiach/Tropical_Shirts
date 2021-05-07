@@ -1,99 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- asdasdasdasd-->
+  
 <head>
+=======
+  <head>
     <title>Product Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <link rel="stylesheet" href="carts.css" />
 
     <style>
-        .column {
-            float: left;
-            width: 50.00%;
-            padding-top: 100px;
-        }
+      ion-icon {
+        font-size: 30px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--- Sidepanel Devon Wang-->
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="Food.html">Food</a>
-        <a href="Electronics.html">Electronics</a>
-        <a href="Health.html">Health</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="Food.html">Food</a>
+      <a href="Electronics.html">Electronics</a>
+      <a href="Health.html">Health</a>
     </div>
-
 
     <!-- Jiahao Zhang-->
     <div class="Main-Website">
-        <header class="rows">
-            <div>
-                <!--- Sidepanel Devon Wang -->
-                <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <header class="rows">
+        <div>
+          <!--- Sidepanel Devon Wang -->
+          <button class="openbtn" onclick="openNav()">&#9776;</button>
 
-                <a href="index.html">Tropical Shirt</a>
-            </div>
+          <a href="index.html">Tropical Shirt</a>
+        </div>
 
-            <!--- Shopping Cart button and Catalog Button -->
-            <div>
-                <a href="Shopping_Cart.html">Shopping Cart</a>&nbsp&nbsp &nbsp&nbsp
-                <!-- Jiahao Zhang-->
-                <a href="Catalog.html">Catalog</a> &nbsp&nbsp &nbsp&nbsp
-                <a href="Login.html">Login</a>
-            </div>
-        </header>
+        <!--- Shopping Cart button and Catalog Button -->
+        <div>
+          <a class="openbtn" href="Shopping_Cart.html">
+            <!--- Shopping Cart Number -->
+            <ion-icon name="cart-outline"></ion-icon><span>0</span> </a
+          >&nbsp&nbsp &nbsp&nbsp
+
+          <a href="Catalog.html">Catalog</a> &nbsp&nbsp &nbsp&nbsp
+          <a href="Login.html">Login</a>
+        </div>
+      </header>
     </div>
 
     <!--- top naviagtion/search bar Devon Wang-->
     <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <input type="text" placeholder="Search..">
+      <a class="active" href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <input type="text" placeholder="Search.." />
     </div>
 
-
-    <div class="column">
-        <center><img src="airpods.jpg" width="400px" height="400px"> </center>
-    </div>
-    <div class="column">
-        <h2>Apple Airpods Pro (White) <br><br></h2>
-        <h3>Price:$199 </h3>
-        <!--- add to cart icon Devon Wang-->
-        <div>
-            <button type="button" onclick="increase()">+</button>
-            <input type="text" id="text" value="0">
-            <button type="button" onclick="decrease()">-</button>
+    <section class="container content-section">
+      <div class="shop-items">
+        <div class="shop-item">
+          <span class="shop-item-title">Apple Airpods Pro White</span>
+          <img class="shop-item-image" src="airpods.jpg" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$199</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
         </div>
-        <button style="font-size:24px">Add to Cart <i class="fa fa-shopping-cart"></i>
-    </div>
-
-</body>
-<!--- Sidepanel  Devon Wang-->
-<script>
+      </div>
+    </section>
+  </body>
+  
+  <!--- Sidepanel  Devon Wang-->
+  <script>
     /* Set the width of the sidebar to 250px (show it) */
     function openNav() {
-        document.getElementById("mySidepanel").style.width = "250px";
+      document.getElementById("mySidepanel").style.width = "250px";
     }
     /* Set the width of the sidebar to 0 (hide it) */
     function closeNav() {
-        document.getElementById("mySidepanel").style.width = "0";
+      document.getElementById("mySidepanel").style.width = "0";
     }
-</script>
+  </script>
 
-<!--- add to cart icon Devon Wang-->
-<script>
-    function increase() {
-         var textBox = document.getElementById("text");
-         textBox.value++;
-                
-    }    
-    function decrease() {
-         var textBox = document.getElementById("text");
-         textBox.value--;
-    }  
-</script>
-
+  <script src="shoppin.js"></script>
 </html>

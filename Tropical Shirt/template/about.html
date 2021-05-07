@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Tropical Shirt</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    </style>
+</head>
+
+<body>
+<center><h1>About Us</h1></center>
+<h2><p>
+    Welcome to Tropical Shirt, your number one source for online shopping. We're dedicated to giving you the very best of shopping website.For our CSE442 course project, we offer you this online website. Our passion for bringing consumers better shopping experience drove us to create this shopping website. We now serve customers all over the country and are thrilled that we're able to turn our passion into our own website. We hope you enjoy the products on our website as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+  </p>
+  <p>
+Sincerely
+</p>
+<p>
+Tropical Shirt Team
+</p>
+</h2>
+
+<hr>
+<center><h1><p>Team Member Information</p></h1>
+  <h2><p>Jiahao Zhang</p></h2>
+  <p><a href="mailto:jiahao.990428@gmail.com">Email: jiahao.990428@gmail.com</a>  </p>
+  
+  
+  <h2><p>Yinxia Chen</p></h2>
+  <p><a href="mailto:yinxiach@buffalo.edu">Email: yinxiach@buffalo.edu</a>  </p>
+  
+  <h2><p>Zhijie Xu</p></h2>
+  <p><a href="mailto:zhijiexu@buffalo.edu">Email: zhijiexu@buffalo.edu</a>  </p>
+  
+  <h2><p>Devon Wang</p></h2>
+  <p><a href="mailto:devonwan@buffalo.edu">Email: devonwan@buffalo.edu</a>  </p>
+  
+  <h2><p>Xueping Leng</p></h2>
+  <p><a href="mailto:xleng@buffalo.edu">Email: xleng@buffalo.edu</a>  </p>
+  
+
+
+</center>
+<hr>
+<div class="container">
+    <div style="text-align:center">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="contact.jpeg" style="width:100%">
+      </div>
+      <div class="column">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="china">China</option>
+            <option value="mexico">Mexico</option>
+            <option value="france">France</option>
+            <option value="uk">uk</option>
+          </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
